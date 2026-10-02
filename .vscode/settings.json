@@ -1,0 +1,22 @@
+{
+    "explorer.excludeGitIgnore": true,
+    "files.exclude": {
+        "**/.vscode": true,
+        "**/.github": true,
+        "**/.cursor": true,
+        "**/.gitignore": true,
+        "**/AGENTS.md": true,
+        "**/CLAUDE.md": true,
+        "**/*.pyc": {"when": "$(basename).py"},
+        "**/__pycache__": true,
+        "**/.*": true,
+        "**/CVS": true,
+        "**/Thumbs.db": true
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "markdown": false,
+        "plaintext": false
+    },
+    "workbench.editor.empty.hint": "hidden",
+}

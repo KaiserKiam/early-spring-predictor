@@ -1,0 +1,32 @@
+target-version = "py314"
+line-length = 100
+output-format = "grouped"
+
+[lint]
+select = ["ALL"]
+ignore = [
+    "D107", "D200", "D202", "D203", "D205", "D210", "D211", "D212", "D213", "D214", "D215", "D301", "D400", "D401", "D405", "D406", "D407", "D408", "D409", "D410", "D411", "D412", "D413", "D414", "D415", "D416", "D417", "DOC",
+    "FBT001", "FBT002", "CPY", "EM", "INP001", "T20", "Q000", "S311", "PTH123", "B905",
+    "RET505", "RET506", "RET507", "RET508", "TC001", "TC002", "TC003", "I001", "TD", "PLW1514",
+    "EXE002", "PLR2004", "SIM108", "TRY003", "TRY300", "UP015", "UP017", "DTZ001",
+    "I001",
+]
+fixable = ["FBT003", "COM", "W291", "W292", "W293", "W391", "D204"]
+unfixable = []
+
+[lint.flake8-annotations]
+# Do not require return type annotations for functions that do not return a value.
+# Allows main() to not have a return type annotation.
+suppress-none-returning = true
+
+[lint.pydocstyle]
+# (D103) Ignore missing docstrings on given functions - note: not supported yet...
+#ignore-missing-docstrings-on-functions = ["main", "test_*"]
+
+[lint.extend-per-file-ignores]
+# Ignore docstring and use of assert errors in test files.
+"**/*_test.py" = ["D", "S101"]
+
+[lint.flake8-tidy-imports.banned-api]
+"unittest".msg = "You are required to use pytest instead of unittest for testing."
+"secrets".msg = "Use 'random' module instead of 'secrets'."
