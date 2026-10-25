@@ -22,3 +22,7 @@ Icon[
 
 *.json
 *.data
+
+# the train/test sets are required deliverables, so commit them
+!/train_set.parquet
+!/test_set.parquet
