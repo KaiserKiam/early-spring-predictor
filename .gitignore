@@ -19,3 +19,6 @@ Icon[
 *.gz
 *.parquet
 *.zip
+
+*.json
+*.data
